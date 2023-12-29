@@ -1,0 +1,110 @@
+.root {
+  width: 1920px;
+  height: 1080px;
+  background-color: #E8E8E8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  width: 739px;
+  height: 821px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 50px;
+}
+
+.left {
+  height: 771px;
+  width: 151px;
+}
+
+.studentul {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  line-height: 45px;
+}
+
+.studentli {
+  color: #35353580;
+  list-style: none;
+  font-size: 0.8rem;
+  &.selected {
+    font-weight: bold;
+  }
+
+  &.notSelected {
+    opacity: 0.5;
+  }
+
+}
+
+.boarder {
+  height: 771px;
+  width: 1px;
+  background-color: #A5A5A5;
+  margin: 0 10px 0 10px;
+}
+
+.right {
+  height: 771px;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  width: 500px;
+  height: 638px;
+  display: flex;
+  flex-direction: column;
+  padding: 21px;
+  padding-top: 10.5px;
+  text-align: justify;
+}
+
+.intro,
+.str {
+  font-size: 2rem;
+  color: #4B4B4B;
+  margin-bottom: 21px;
+}
+
+.introContent,
+.strContent {
+  color: #919191;
+  font-size: 0.8rem;
+  margin-bottom: 21px;
+}
+
+.search {
+  width: 500px;
+  height: 121px;
+  display: flex;
+  flex-direction: column;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+}
+
+.searchinput {
+  height: 32px;
+  border-radius: 5px;
+  border: 0;
+  margin-bottom: 10px;
+}
+
+.searchbutton {
+  height: 64px;
+  color: white;
+  border-radius: 10px;
+  border: 0;
+}
+
+.dot::before {
+  content: "●";
+  margin-right: 50px;
+}
