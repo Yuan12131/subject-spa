@@ -38,11 +38,13 @@ const StudentList = () => {
     setSelectedStudent(student);
   };
 
+  // 검색 버튼을 눌렀을 때 호출되는 함수
   const handleSearch = () => {
     const foundStudent = students.find(
       (student) => student.name === searchName
     );
 
+    // 이름이 일치하는 학생을 찾으면 해당 학생을 선택하도록 함
     if (foundStudent) {
       handleClick(foundStudent);
     } else {
@@ -50,8 +52,6 @@ const StudentList = () => {
       setSelectedStudent(null);
     }
   };
-
-const shouldShowInitialStudent = !selectedStudent && !searchName;
 
   // `map` 함수를 사용하여 학생 목록을 순회하고, 각 학생에 대한 리스트 아이템을 렌더링
   // 학생을 클릭하면 `handleClick` 함수가 호출되어 `selectedStudent`가 업데이트
@@ -62,6 +62,7 @@ const shouldShowInitialStudent = !selectedStudent && !searchName;
           {students.map((student, index) => (
             <li
               key={index}
+              // 클래스 동적으로 설정. 선택된 학생에는 'selected'와 'dot' 클래스를 함께 적용
               className={`${styles.studentli} ${
                 selectedStudent === student ? `${styles.selected} ${styles.dot}` : styles.notSelected
               }`}
